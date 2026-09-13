@@ -12,20 +12,21 @@
 .heroInner {
   display: flex;
   flex-wrap: wrap;
-  gap: 3rem;
-  max-width: 1300px;
+  gap: 0;
+  max-width: 2000px;
   margin: 0 auto;
   padding: 4vw 3vw 3rem;
   width: 100%;
 }
 
 .heroLeft {
-  flex: 1 1 320px;
+  flex: 0 0 calc(47vw - 8px);
+  min-width: 280px;
 }
 
 .heroRight {
-  flex: 1 1 420px;
-  max-width: 560px;
+  flex: 1 1 0%;
+  min-width: 280px;
   color: #ffffff;
 }
 
