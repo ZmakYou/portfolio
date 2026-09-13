@@ -16,8 +16,8 @@ export default function Header() {
         <Image
           src="/images/global/logo.png"
           alt="Matt Zmak Design"
-          width={48}
-          height={48}
+          width={60}
+          height={60}
           priority
         />
       </Link>
