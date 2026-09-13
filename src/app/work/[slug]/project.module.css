@@ -4,6 +4,9 @@
   display: flex;
   align-items: center;
   padding-top: calc(5vw + 60px);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .heroInner {

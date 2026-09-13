@@ -28,7 +28,13 @@ export default async function ProjectPage({
 
   return (
     <>
-      <section className={styles.hero} style={{ backgroundColor: project.heroColor }}>
+      <section
+        className={styles.hero}
+        style={{
+          backgroundColor: project.heroColor,
+          backgroundImage: `url(${project.heroImage})`,
+        }}
+      >
         <div className={styles.heroInner}>
           <div className={styles.heroLeft}>
             <p className={styles.category}>{project.category}</p>
