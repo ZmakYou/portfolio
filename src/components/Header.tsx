@@ -10,6 +10,7 @@ import styles from "./Header.module.css";
 export default function Header() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const isWorkActive = pathname === "/" || pathname.startsWith("/work/");
 
   return (
     <header className={styles.header}>
@@ -26,7 +27,7 @@ export default function Header() {
       <nav className={styles.nav}>
         <Link
           href="/"
-          className={pathname === "/" ? styles.active : undefined}
+          className={isWorkActive ? styles.active : undefined}
         >
           work
         </Link>
@@ -69,10 +70,18 @@ export default function Header() {
 
       {open && (
         <div className={styles.mobileMenu}>
-          <Link href="/" onClick={() => setOpen(false)}>
+          <Link
+            href="/"
+            className={isWorkActive ? styles.active : undefined}
+            onClick={() => setOpen(false)}
+          >
             work
           </Link>
-          <Link href="/about" onClick={() => setOpen(false)}>
+          <Link
+            href="/about"
+            className={pathname === "/about" ? styles.active : undefined}
+            onClick={() => setOpen(false)}
+          >
             about
           </Link>
           <div className={styles.mobileSocial}>
