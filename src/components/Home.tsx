@@ -24,7 +24,7 @@ export default function Home() {
           className={styles.bgLayer}
           style={{
             backgroundImage: `url(${p.homeImage})`,
-            opacity: hovered === p.slug ? 1 : 0,
+            opacity: hovered === p.slug ? 0.5 : 0,
           }}
         />
       ))}
