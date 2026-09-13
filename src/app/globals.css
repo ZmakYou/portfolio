@@ -1,3 +1,15 @@
+@font-face {
+  font-family: "googlesans-bold-webfont";
+  src: url("/fonts/googlesans-bold-webfont.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "googlesans-regular-webfont";
+  src: url("/fonts/googlesans-regular-webfont.woff") format("woff");
+  font-display: swap;
+}
+
 :root {
   --color-bg: #ffffff;
   --color-text: #54575a;
@@ -5,8 +17,8 @@
   --color-dark: #3a3a3d;
   --color-accent: #ff575a;
   --color-tag: #cbcbcb;
-  --font-heading: var(--font-poppins), sans-serif;
-  --font-body: var(--font-inter), sans-serif;
+  --font-heading: "googlesans-bold-webfont", sans-serif;
+  --font-body: "googlesans-regular-webfont", sans-serif;
 }
 
 html {
@@ -24,7 +36,7 @@ body {
   color: var(--color-text);
   background: var(--color-bg);
   font-family: var(--font-body);
-  font-weight: 300;
+  font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

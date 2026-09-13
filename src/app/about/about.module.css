@@ -45,7 +45,7 @@
 
 .title {
   font-family: var(--font-heading);
-  font-weight: 700;
+  font-weight: 400;
   font-size: 2.5rem;
   margin-bottom: 1.5rem;
 }
@@ -53,12 +53,12 @@
 .text p {
   font-size: 1.05rem;
   line-height: 1.7;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .contactHeading {
   font-family: var(--font-heading);
-  font-weight: 700;
+  font-weight: 400;
   font-size: 2.25rem;
   color: var(--color-accent);
   margin-top: 2.5rem;
