@@ -59,18 +59,15 @@
   font-family: var(--font-heading);
   font-weight: 400;
   font-size: min(3.36vw + 1rem, 83.2px);
-  color: var(--color-accent);
+  color: #ffffff;
   margin-top: 2.5rem;
 }
 
 .email {
   display: inline-block;
   margin-top: 0.5rem;
-  color: var(--color-accent);
+  color: #ffffff;
   font-size: 1rem;
-}
-
-.email:hover {
   text-decoration: underline;
 }
 
