@@ -54,10 +54,6 @@
   color: #ffffff;
 }
 
-.involvement {
-  opacity: 0.85;
-}
-
 .gallery {
   display: flex;
   flex-direction: column;

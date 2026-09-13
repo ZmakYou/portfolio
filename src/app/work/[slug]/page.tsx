@@ -44,7 +44,7 @@ export default async function ProjectPage({
             {project.paragraphs.map((para, i) => (
               <p key={i}>{para}</p>
             ))}
-            <p className={styles.involvement}>{project.involvement}</p>
+            <p>{project.involvement}</p>
           </div>
         </div>
       </section>
