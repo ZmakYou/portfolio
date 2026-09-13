@@ -19,4 +19,11 @@
   border-radius: 50%;
   background: var(--color-accent);
   color: #ffffff;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.iconInstagram:hover,
+.iconLinkedin:hover {
+  background: #ffffff;
+  color: var(--color-accent);
 }
