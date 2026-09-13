@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import Image from "next/image";
+import Link from "next/link";
 import { projects, getProject } from "@/data/projects";
 import styles from "./project.module.css";
 
@@ -25,6 +26,10 @@ export default async function ProjectPage({
   const { slug } = await params;
   const project = getProject(slug);
   if (!project) notFound();
+
+  const index = projects.findIndex((p) => p.slug === slug);
+  const prevProject = index > 0 ? projects[index - 1] : null;
+  const nextProject = index < projects.length - 1 ? projects[index + 1] : null;
 
   return (
     <>
@@ -69,6 +74,43 @@ export default async function ProjectPage({
             />
           </div>
         ))}
+      </section>
+
+      <section className={styles.pagination}>
+        {prevProject ? (
+          <Link
+            href={`/work/${prevProject.slug}`}
+            className={`${styles.paginationLink} ${styles.paginationPrev}`}
+          >
+            <svg
+              className={styles.paginationIcon}
+              viewBox="0 0 9 16"
+              fill="none"
+            >
+              <polyline points="7.3,14.7 2.5,8 7.3,1.2" />
+            </svg>
+            <h2 className={styles.paginationTitle}>{prevProject.title}</h2>
+          </Link>
+        ) : (
+          <span />
+        )}
+        {nextProject ? (
+          <Link
+            href={`/work/${nextProject.slug}`}
+            className={`${styles.paginationLink} ${styles.paginationNext}`}
+          >
+            <h2 className={styles.paginationTitle}>{nextProject.title}</h2>
+            <svg
+              className={styles.paginationIcon}
+              viewBox="0 0 9 16"
+              fill="none"
+            >
+              <polyline points="1.6,1.2 6.5,7.9 1.6,14.7" />
+            </svg>
+          </Link>
+        ) : (
+          <span />
+        )}
       </section>
     </>
   );

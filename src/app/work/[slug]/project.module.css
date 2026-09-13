@@ -70,7 +70,49 @@
   height: auto;
 }
 
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  padding: 3vw;
+}
+
+.paginationLink {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  color: var(--color-accent);
+}
+
+.paginationIcon {
+  width: 18px;
+  height: 32px;
+  flex-shrink: 0;
+  stroke: var(--color-accent);
+  stroke-width: 1px;
+  stroke-miterlimit: 10;
+}
+
+.paginationTitle {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  font-size: calc(1.2vw + 1rem);
+  white-space: nowrap;
+}
+
 @media (max-width: 767px) {
+  .pagination {
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1.5rem;
+  }
+
+  .paginationTitle {
+    font-size: 1.1rem;
+    white-space: normal;
+  }
+
   .heroInner {
     display: block;
     padding: 2rem 1.5rem;
