@@ -12,7 +12,7 @@ export default function Footer() {
           aria-label="Instagram"
           className={styles.iconInstagram}
         >
-          <InstagramIcon size={16} />
+          <InstagramIcon size={28} />
         </a>
         <a
           href="https://www.linkedin.com/in/mattzmak/"
@@ -21,7 +21,7 @@ export default function Footer() {
           aria-label="LinkedIn"
           className={styles.iconLinkedin}
         >
-          <LinkedinIcon size={16} />
+          <LinkedinIcon size={28} />
         </a>
       </nav>
     </footer>
