@@ -37,6 +37,12 @@
   font-size: min(3.36vw + 1rem, 83.2px);
   color: #ffffff;
   opacity: 0.85;
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+.list a:hover {
+  color: var(--color-accent);
+  opacity: 1;
 }
 
 @media (max-width: 767px) {
