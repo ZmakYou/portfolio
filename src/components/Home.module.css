@@ -35,12 +35,8 @@
   font-weight: 400;
   line-height: 1.5;
   font-size: min(3.36vw + 1rem, 83.2px);
-  color: #f1f1f1;
-  transition: color 0.3s ease;
-}
-
-.list a:hover {
   color: #ffffff;
+  opacity: 0.85;
 }
 
 @media (max-width: 767px) {
