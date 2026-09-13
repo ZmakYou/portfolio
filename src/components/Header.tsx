@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -7,6 +8,7 @@ import styles from "./Header.module.css";
 
 export default function Header() {
   const pathname = usePathname();
+  const [open, setOpen] = useState(false);
 
   return (
     <header className={styles.header}>
@@ -68,6 +70,45 @@ export default function Header() {
           </svg>
         </a>
       </div>
+
+      <button
+        type="button"
+        className={styles.menuButton}
+        aria-label={open ? "Close menu" : "Open menu"}
+        aria-expanded={open}
+        onClick={() => setOpen((v) => !v)}
+      >
+        {open ? "✕" : "+"}
+      </button>
+
+      {open && (
+        <div className={styles.mobileMenu}>
+          <Link href="/" onClick={() => setOpen(false)}>
+            work
+          </Link>
+          <Link href="/about" onClick={() => setOpen(false)}>
+            about
+          </Link>
+          <div className={styles.mobileSocial}>
+            <a
+              href="http://instagram.com/zmakyou"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+            >
+              Instagram
+            </a>
+            <a
+              href="https://www.linkedin.com/in/mattzmak/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
+              LinkedIn
+            </a>
+          </div>
+        </div>
+      )}
     </header>
   );
 }
