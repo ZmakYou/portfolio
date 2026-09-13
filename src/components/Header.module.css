@@ -36,6 +36,8 @@
 
 .nav a {
   position: relative;
+  display: inline-block;
+  line-height: 1.7;
   padding-bottom: 0.1em;
 }
 
