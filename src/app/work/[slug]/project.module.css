@@ -2,7 +2,7 @@
   position: relative;
   min-height: 60vh;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   padding-top: calc(5vw + 60px);
   background-size: cover;
   background-repeat: no-repeat;
@@ -15,7 +15,7 @@
   gap: 3rem;
   max-width: 1300px;
   margin: 0 auto;
-  padding: 3rem 3vw;
+  padding: 4vw 3vw 3rem;
   width: 100%;
 }
 
