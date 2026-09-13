@@ -3,7 +3,7 @@
   min-height: 60vh;
   display: flex;
   align-items: center;
-  padding-top: 6rem;
+  padding-top: calc(5vw + 60px);
 }
 
 .heroInner {
@@ -12,7 +12,7 @@
   gap: 3rem;
   max-width: 1300px;
   margin: 0 auto;
-  padding: 3rem 3rem;
+  padding: 3rem 3vw;
   width: 100%;
 }
 
@@ -36,7 +36,7 @@
 .category {
   font-family: var(--font-heading);
   font-weight: 400;
-  font-size: 1rem;
+  font-size: calc(0.6vw + 1rem);
   color: #cbcbcb;
   margin-bottom: 0.75rem;
 }
@@ -44,7 +44,7 @@
 .title {
   font-family: var(--font-heading);
   font-weight: 400;
-  font-size: 2.75rem;
+  font-size: min(3.36vw + 1rem, 83.2px);
   line-height: 1.15;
   color: #ffffff;
 }
@@ -68,12 +68,12 @@
   height: auto;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 767px) {
   .heroInner {
     padding: 2rem 1.5rem;
   }
 
   .title {
-    font-size: 2rem;
+    font-size: calc(0.0336 * min(100vh, 900px) + 1rem);
   }
 }
