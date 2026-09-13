@@ -49,7 +49,14 @@ export default async function ProjectPage({
         </div>
       </section>
 
-      <section className={styles.gallery}>
+      <section
+        className={styles.gallery}
+        style={
+          project.extraGalleryGapVw
+            ? { marginTop: `calc(3vw + ${project.extraGalleryGapVw}vw)` }
+            : undefined
+        }
+      >
         {project.gallery.map((img, i) => (
           <div key={i} className={styles.galleryItem}>
             <Image
