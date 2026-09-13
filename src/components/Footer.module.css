@@ -1,0 +1,22 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  padding: 2.5rem 0;
+}
+
+.social {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.iconInstagram,
+.iconLinkedin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  color: #ffffff;
+}
