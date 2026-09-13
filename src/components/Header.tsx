@@ -44,7 +44,7 @@ export default function Header() {
           rel="noopener noreferrer"
           aria-label="Instagram"
         >
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
             <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" strokeWidth="1.6" />
             <circle cx="12" cy="12" r="4.5" stroke="currentColor" strokeWidth="1.6" />
             <circle cx="17.5" cy="6.5" r="1.1" fill="currentColor" />
@@ -56,7 +56,7 @@ export default function Header() {
           rel="noopener noreferrer"
           aria-label="LinkedIn"
         >
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
             <rect x="2" y="2" width="20" height="20" rx="3" stroke="currentColor" strokeWidth="1.6" />
             <line x1="7" y1="10" x2="7" y2="17" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
             <circle cx="7" cy="6.7" r="1.1" fill="currentColor" />
