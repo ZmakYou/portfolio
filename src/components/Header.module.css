@@ -68,6 +68,11 @@
 .social a {
   display: flex;
   color: #ffffff;
+  transition: color 0.2s ease;
+}
+
+.social a:hover {
+  color: var(--color-accent);
 }
 
 .menuButton {
