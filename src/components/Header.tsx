@@ -45,7 +45,7 @@ export default function Header() {
           rel="noopener noreferrer"
           aria-label="Instagram"
         >
-          <InstagramIcon size={20} />
+          <InstagramIcon size={20} cropped />
         </a>
         <a
           href="https://www.linkedin.com/in/mattzmak/"
@@ -53,7 +53,7 @@ export default function Header() {
           rel="noopener noreferrer"
           aria-label="LinkedIn"
         >
-          <LinkedinIcon size={20} />
+          <LinkedinIcon size={20} cropped />
         </a>
       </div>
 
