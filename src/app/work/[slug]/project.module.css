@@ -10,9 +10,8 @@
 }
 
 .heroInner {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0;
+  display: grid;
+  grid-template-columns: repeat(24, 1fr);
   max-width: 2000px;
   margin: 0 auto;
   padding: 4vw 3vw 3rem;
@@ -20,13 +19,11 @@
 }
 
 .heroLeft {
-  flex: 0 0 calc(47vw - 8px);
-  min-width: 280px;
+  grid-column: 1 / 11;
 }
 
 .heroRight {
-  flex: 1 1 0%;
-  min-width: 280px;
+  grid-column: 13 / 25;
   color: #ffffff;
 }
 
@@ -75,7 +72,12 @@
 
 @media (max-width: 767px) {
   .heroInner {
+    display: block;
     padding: 2rem 1.5rem;
+  }
+
+  .heroRight {
+    margin-top: 2rem;
   }
 
   .title {
