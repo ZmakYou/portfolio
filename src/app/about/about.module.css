@@ -69,6 +69,11 @@
   color: #ffffff;
   font-size: 1rem;
   text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.email:hover {
+  color: var(--color-accent);
 }
 
 @media (max-width: 767px) {
