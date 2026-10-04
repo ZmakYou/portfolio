@@ -12,10 +12,11 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .reveal,
-  .shown {
-    opacity: 1;
+  .reveal {
     transform: none;
-    transition: none;
+  }
+
+  .shown {
+    transition: opacity 0.8s ease;
   }
 }
