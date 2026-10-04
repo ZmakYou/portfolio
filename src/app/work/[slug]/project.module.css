@@ -124,14 +124,22 @@
   overflow-wrap: break-word;
 }
 
+@media (max-width: 799px) {
+  .heroInner,
+  .pagination {
+    padding-left: 6vw;
+    padding-right: 6vw;
+  }
+}
+
 @media (max-width: 767px) {
   .pagination {
-    padding: 2.75vw 1.5rem 0;
+    padding: 2.75vw 6vw 0;
   }
 
   .heroInner {
     display: block;
-    padding: 2rem 1.5rem;
+    padding: 2rem 6vw;
   }
 
   .heroRight {
