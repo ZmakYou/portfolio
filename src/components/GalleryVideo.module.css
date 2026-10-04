@@ -1,0 +1,47 @@
+.wrapper {
+  position: relative;
+  container-type: inline-size;
+  line-height: 0;
+}
+
+.play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  width: 80px;
+  height: 80px;
+  padding: 0;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+  color: #ffffff;
+  opacity: 0.9;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.play svg {
+  width: 60%;
+  height: 60%;
+  fill: currentColor;
+}
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+@container (min-width: 800px) {
+  .play {
+    width: 120px;
+    height: 120px;
+  }
+}

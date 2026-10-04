@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
+import GalleryVideo from "@/components/GalleryVideo";
 import { projects, getProject } from "@/data/projects";
 import styles from "./project.module.css";
 
@@ -61,13 +62,10 @@ export default async function ProjectPage({
         {project.gallery.map((item, i) =>
           "video" in item ? (
             <div key={i} className={styles.galleryItem}>
-              <video
+              <GalleryVideo
                 className={styles.galleryVideo}
                 src={item.video.webm}
                 poster={item.video.poster}
-                controls
-                playsInline
-                preload="metadata"
               />
             </div>
           ) : (
