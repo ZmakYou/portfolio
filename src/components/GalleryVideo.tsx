@@ -7,13 +7,30 @@ export default function GalleryVideo({
   src,
   poster,
   className,
+  autoplayLoop = false,
 }: {
   src: string;
   poster?: string;
   className?: string;
+  autoplayLoop?: boolean;
 }) {
   const ref = useRef<HTMLVideoElement>(null);
   const [playing, setPlaying] = useState(false);
+
+  if (autoplayLoop) {
+    return (
+      <video
+        className={className}
+        src={src}
+        poster={poster}
+        autoPlay
+        loop
+        muted
+        playsInline
+        preload="auto"
+      />
+    );
+  }
 
   return (
     <div className={styles.wrapper}>

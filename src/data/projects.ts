@@ -13,8 +13,7 @@ export type Project = {
 
 export type GalleryItem =
   | { src: string; width: number; height: number }
-  | { video: { webm: string; poster?: string } }
-  | { gif: string; width: number; height: number };
+  | { video: { webm: string; poster?: string; autoplayLoop?: boolean } };
 
 export const projects: Project[] = [
   {
@@ -211,9 +210,19 @@ export const projects: Project[] = [
     gallery: [
       { src: "/images/work/thsocialmedia/gallery-01.jpg", width: 1600, height: 1200 },
       { src: "/images/work/thsocialmedia/gallery-02.jpg", width: 1600, height: 1200 },
-      { gif: "/videos/thsocialmedia-1.gif", width: 1280, height: 720 },
+      {
+        video: {
+          webm: "/videos/thsocialmedia-1.webm",
+          autoplayLoop: true,
+        },
+      },
       { src: "/images/work/thsocialmedia/gallery-03.jpg", width: 1600, height: 1200 },
-      { gif: "/videos/thsocialmedia-2.gif", width: 1280, height: 720 },
+      {
+        video: {
+          webm: "/videos/thsocialmedia-2.webm",
+          autoplayLoop: true,
+        },
+      },
       { src: "/images/work/thsocialmedia/gallery-04.jpg", width: 1600, height: 1200 },
     ],
   },

@@ -66,18 +66,7 @@ export default async function ProjectPage({
                 className={styles.galleryVideo}
                 src={item.video.webm}
                 poster={item.video.poster}
-              />
-            </div>
-          ) : "gif" in item ? (
-            <div key={i} className={styles.galleryItem}>
-              <Image
-                src={item.gif}
-                alt={`${project.title} — animation ${i + 1}`}
-                width={item.width}
-                height={item.height}
-                sizes="100vw"
-                unoptimized
-                className={styles.galleryImage}
+                autoplayLoop={item.video.autoplayLoop}
               />
             </div>
           ) : (
