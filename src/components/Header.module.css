@@ -171,10 +171,6 @@
     visibility: visible;
   }
 
-  .mobileMenu {
-    --menu-line: calc(0.019572 * min(100vh, 900px) + 1rem);
-  }
-
   .mobileNav {
     display: flex;
     flex-direction: column;
@@ -188,13 +184,20 @@
   }
 
   .mobileNav a {
-    padding: calc(var(--menu-line) * 0.5063) 0;
-    font-family: var(--font-body);
-    font-weight: 300;
-    font-size: calc(var(--menu-line) + 8px);
-    font-size: round(nearest, calc(var(--menu-line) + 8px), 4px);
-    line-height: var(--menu-line);
+    padding: 1rem 0;
+    font-family: var(--font-heading);
+    font-weight: 400;
+    line-height: 1.5;
+    font-size: min(3.36vw + 1rem, 80px);
+    font-size: round(nearest, min(3.36vw + 1rem, 80px), 4px);
     color: var(--color-accent);
+  }
+
+  @media (max-width: 767px) {
+    .mobileNav a {
+      font-size: calc(0.0336 * min(100vh, 900px) + 1rem);
+      font-size: round(nearest, calc(0.0336 * min(100vh, 900px) + 1rem), 4px);
+    }
   }
 
   .mobileSocial {
