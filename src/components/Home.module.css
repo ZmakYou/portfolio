@@ -34,7 +34,8 @@
   font-family: var(--font-heading);
   font-weight: 400;
   line-height: 1.5;
-  font-size: min(3.36vw + 1rem, 83.2px);
+  font-size: min(3.36vw + 1rem, 80px);
+  font-size: round(nearest, min(3.36vw + 1rem, 80px), 4px);
   color: #ffffff;
   opacity: 0.85;
   transition: color 0.2s ease, opacity 0.2s ease;
@@ -48,5 +49,6 @@
 @media (max-width: 767px) {
   .list a {
     font-size: calc(0.0336 * min(100vh, 900px) + 1rem);
+    font-size: round(nearest, calc(0.0336 * min(100vh, 900px) + 1rem), 4px);
   }
 }

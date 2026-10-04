@@ -37,7 +37,7 @@
   margin-right: 1.8vw;
   font-family: var(--font-heading);
   font-weight: 400;
-  font-size: 1.07rem;
+  font-size: 16px;
 }
 
 .nav a {
@@ -192,6 +192,7 @@
     font-family: var(--font-body);
     font-weight: 300;
     font-size: var(--menu-line);
+    font-size: round(nearest, var(--menu-line), 4px);
     line-height: var(--menu-line);
     color: var(--color-accent);
   }
