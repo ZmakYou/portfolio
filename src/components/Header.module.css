@@ -121,9 +121,7 @@
     top: 50%;
     left: 50%;
     background: #ffffff;
-    transition:
-      transform 0.25s cubic-bezier(0.2, 0.6, 0.3, 1),
-      background-color 0.25s cubic-bezier(0.2, 0.6, 0.3, 1);
+    transition: transform 0.25s cubic-bezier(0.2, 0.6, 0.3, 1);
   }
 
   .bar:nth-child(1) {
@@ -173,12 +171,16 @@
     visibility: visible;
   }
 
+  .mobileMenu {
+    --menu-line: calc(0.019572 * min(100vh, 900px) + 1rem);
+  }
+
   .mobileMenu > a {
-    padding: 0.5063em 0;
+    padding: calc(var(--menu-line) * 0.5063) 0;
     font-family: var(--font-body);
     font-weight: 300;
-    font-size: calc(0.019572 * min(100vh, 900px) + 1rem);
-    line-height: 1;
+    font-size: calc(var(--menu-line) * 0.933);
+    line-height: var(--menu-line);
     color: var(--color-accent);
   }
 
