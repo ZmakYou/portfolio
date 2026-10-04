@@ -121,7 +121,13 @@
     top: 50%;
     left: 50%;
     background: #ffffff;
-    transition: transform 0.25s cubic-bezier(0.2, 0.6, 0.3, 1);
+    transition:
+      transform 0.25s cubic-bezier(0.2, 0.6, 0.3, 1),
+      background-color 0.2s ease;
+  }
+
+  .menuButton:hover .bar {
+    background: var(--color-accent);
   }
 
   .bar:nth-child(1) {
@@ -138,6 +144,7 @@
 
   .menuButtonOpen .bar {
     background: var(--color-accent);
+    transition: transform 0.25s cubic-bezier(0.2, 0.6, 0.3, 1);
   }
 
   .menuButtonOpen .bar:nth-child(1) {
