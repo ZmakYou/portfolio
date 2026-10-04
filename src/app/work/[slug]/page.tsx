@@ -5,6 +5,19 @@ import GalleryVideo from "@/components/GalleryVideo";
 import { projects, getProject } from "@/data/projects";
 import styles from "./project.module.css";
 
+function BrokenTitle({ title }: { title: string }) {
+  const [first, ...rest] = title.split(" ");
+  return rest.length ? (
+    <>
+      {first}
+      <br />
+      {rest.join(" ")}
+    </>
+  ) : (
+    <>{first}</>
+  );
+}
+
 export function generateStaticParams() {
   return projects.map((p) => ({ slug: p.slug }));
 }
@@ -97,7 +110,9 @@ export default async function ProjectPage({
             >
               <polyline points="7.3,14.7 2.5,8 7.3,1.2" />
             </svg>
-            <h2 className={styles.paginationTitle}>{prevProject.title}</h2>
+            <h2 className={styles.paginationTitle}>
+              <BrokenTitle title={prevProject.title} />
+            </h2>
           </Link>
         ) : (
           <span />
@@ -107,7 +122,9 @@ export default async function ProjectPage({
             href={`/work/${nextProject.slug}`}
             className={`${styles.paginationLink} ${styles.paginationNext}`}
           >
-            <h2 className={styles.paginationTitle}>{nextProject.title}</h2>
+            <h2 className={styles.paginationTitle}>
+              <BrokenTitle title={nextProject.title} />
+            </h2>
             <svg
               className={styles.paginationIcon}
               viewBox="0 0 9 16"
