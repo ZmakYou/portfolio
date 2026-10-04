@@ -191,6 +191,7 @@ export const projects: Project[] = [
       {
         video: {
           webm: "/videos/mzfilmtitlesequence.webm",
+          poster: "/videos/mzfilmtitlesequence-poster.jpg",
         },
       },
     ],
