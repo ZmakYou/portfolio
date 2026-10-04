@@ -63,15 +63,11 @@ export default async function ProjectPage({
             <div key={i} className={styles.galleryItem}>
               <video
                 className={styles.galleryVideo}
+                src={item.video.webm}
                 controls
                 playsInline
                 preload="metadata"
-              >
-                {item.video.webm && (
-                  <source src={item.video.webm} type="video/webm" />
-                )}
-                <source src={item.video.mp4} type="video/mp4" />
-              </video>
+              />
             </div>
           ) : (
             <div key={i} className={styles.galleryItem}>

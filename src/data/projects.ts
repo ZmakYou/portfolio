@@ -1,4 +1,4 @@
-export type Project = {
+﻿export type Project = {
   slug: string;
   title: string;
   category: string;
@@ -13,7 +13,7 @@ export type Project = {
 
 export type GalleryItem =
   | { src: string; width: number; height: number }
-  | { video: { mp4: string; webm?: string } };
+  | { video: { webm: string } };
 
 export const projects: Project[] = [
   {
@@ -31,7 +31,6 @@ export const projects: Project[] = [
     gallery: [
       {
         video: {
-          mp4: "/videos/cvisualidentity.mp4",
           webm: "/videos/cvisualidentity.webm",
         },
       },
@@ -50,7 +49,7 @@ export const projects: Project[] = [
     heroImage: "/images/work/thannualreport/hero.jpg",
     homeImage: "/images/home/thannualreport.jpg",
     paragraphs: [
-      "Toronto Hydro’s 2021 annual report was designed leveraging the theme of “Utility of The Future”— powering transformation. The challenge was to distil the data and analysis regarding Toronto Hydro’s operations and financial performance in an easy and impactful manner.",
+      "Toronto Hydroâ€™s 2021 annual report was designed leveraging the theme of â€œUtility of The Futureâ€â€” powering transformation. The challenge was to distil the data and analysis regarding Toronto Hydroâ€™s operations and financial performance in an easy and impactful manner.",
     ],
     involvement:
       "involvement: principal designer, layout, typography, photo editing, art direction, iconography",
@@ -71,7 +70,7 @@ export const projects: Project[] = [
     homeImage: "/images/home/abmovetofeel.jpg",
     paragraphs: [
       "Allison Bradley is a dancer, choreographer, and educator. She came to me to help build her online presence and help design a website for her with the goal of helping her pivot her career into a new direction.",
-      "I used an editorial approach by layering imagery with textures and pops of Allison’s signature red to capture her new brand foundation and personal belief of “Move to Feel”— building off people's truths to unlock authentic human connection — creating genuine shared experiences that can be felt across different outlets.",
+      "I used an editorial approach by layering imagery with textures and pops of Allisonâ€™s signature red to capture her new brand foundation and personal belief of â€œMove to Feelâ€â€” building off people's truths to unlock authentic human connection â€” creating genuine shared experiences that can be felt across different outlets.",
     ],
     involvement: "involvement: layout, digital design, typography, photo editing",
     gallery: [
@@ -90,8 +89,8 @@ export const projects: Project[] = [
     heroImage: "/images/work/rcontentcreation/hero.jpg",
     homeImage: "/images/home/rcontentcreation.jpg",
     paragraphs: [
-      "The main task of this on-going project was to unify and strengthen Riverse’s social platforms. Previously this popular Toronto-based Pop/R&B music group didn’t have a strong visual presence on their social channels, which provided me with the opportunity to develop a unique graphic language that properly represented the group and stood out amongst the noise on a variety of platforms.",
-      "Different treatments were used depending on the content and channel but always played into the group’s bold and energetic personalities.",
+      "The main task of this on-going project was to unify and strengthen Riverseâ€™s social platforms. Previously this popular Toronto-based Pop/R&B music group didnâ€™t have a strong visual presence on their social channels, which provided me with the opportunity to develop a unique graphic language that properly represented the group and stood out amongst the noise on a variety of platforms.",
+      "Different treatments were used depending on the content and channel but always played into the groupâ€™s bold and energetic personalities.",
     ],
     involvement:
       "involvement: principal designer, layout, typography, photo editing, art direction, motion graphics",
@@ -102,7 +101,6 @@ export const projects: Project[] = [
       { src: "/images/work/rcontentcreation/gallery-04.jpg", width: 1600, height: 1200 },
       {
         video: {
-          mp4: "/videos/rcontentcreation.mp4",
           webm: "/videos/rcontentcreation.webm",
         },
       },
@@ -116,8 +114,8 @@ export const projects: Project[] = [
     heroImage: "/images/work/thutilityofthefuture/hero.jpg",
     homeImage: "/images/home/thutilityofthefuture.jpg",
     paragraphs: [
-      "Developed for the Toronto Hydro B.o.D and Toronto’s City Council, the Utility of the Future Report was created to share the future ambitions and roadmap of the organization.",
-      "Due to the subject matter of the report the goal was to create a bold and future forward design that not only captured the personality and theme of the report but pushed Toronto Hydro’s brand into a new era.",
+      "Developed for the Toronto Hydro B.o.D and Torontoâ€™s City Council, the Utility of the Future Report was created to share the future ambitions and roadmap of the organization.",
+      "Due to the subject matter of the report the goal was to create a bold and future forward design that not only captured the personality and theme of the report but pushed Toronto Hydroâ€™s brand into a new era.",
     ],
     involvement:
       "involvement: principal designer, layout, typography, photo editing, art direction, accessible design",
@@ -158,8 +156,8 @@ export const projects: Project[] = [
     heroImage: "/images/work/auallynewsletter/hero.jpg",
     homeImage: "/images/home/auallynewsletter.jpg",
     paragraphs: [
-      "Alectra challenged me to re-design their “ally” newsletter — a quarterly document targeted towards Alectra Utilities’ stakeholders.",
-      "The result was a collection of tailored documents that targeted each service-territory appropriately. Through the use of colour, photography and visual treatments, the “ally” newsletter was able to deliver dense information in a clear and simple manner.",
+      "Alectra challenged me to re-design their â€œallyâ€ newsletter â€” a quarterly document targeted towards Alectra Utilitiesâ€™ stakeholders.",
+      "The result was a collection of tailored documents that targeted each service-territory appropriately. Through the use of colour, photography and visual treatments, the â€œallyâ€ newsletter was able to deliver dense information in a clear and simple manner.",
     ],
     involvement:
       "involvement: principal designer, layout, digital design, typography, photo editing, art direction",
@@ -178,7 +176,7 @@ export const projects: Project[] = [
     heroImage: "/images/work/mzfilmtitlesequence/hero.jpg",
     homeImage: "/images/home/mzfilmtitlesequence.png",
     paragraphs: [
-      "Not all movies have an opening sequence ‐ the challenge was to design an intro credit reel for the DC film Wonder Woman.",
+      "Not all movies have an opening sequence â€ the challenge was to design an intro credit reel for the DC film Wonder Woman.",
       "The project was built using hand crafted assets and drawing inspiration from the movie itself. Golds, deep reds, rhythmic music and fiery embers help build the dynamic sequence to highlight the powerful essence of Diana, princess of the Thimescira.",
     ],
     involvement:
@@ -190,7 +188,6 @@ export const projects: Project[] = [
       { src: "/images/work/mzfilmtitlesequence/gallery-04.jpg", width: 1600, height: 1200 },
       {
         video: {
-          mp4: "/videos/mzfilmtitlesequence.mp4",
           webm: "/videos/mzfilmtitlesequence.webm",
         },
       },
@@ -204,7 +201,7 @@ export const projects: Project[] = [
     heroImage: "/images/work/thsocialmedia/hero.jpg",
     homeImage: "/images/home/thsocialmedia.jpg",
     paragraphs: [
-      "One of my objectives at Toronto Hydro was to create a visual system for the organization’s social media channels that captured our brand’s personality and unified our platforms.",
+      "One of my objectives at Toronto Hydro was to create a visual system for the organizationâ€™s social media channels that captured our brandâ€™s personality and unified our platforms.",
       "Photography, iconography and typography have all been carefully selected and crafted to maintain a consistent brand tone across all platforms.",
     ],
     involvement:
@@ -214,14 +211,12 @@ export const projects: Project[] = [
       { src: "/images/work/thsocialmedia/gallery-02.jpg", width: 1600, height: 1200 },
       {
         video: {
-          mp4: "/videos/thsocialmedia-1.mp4",
           webm: "/videos/thsocialmedia-1.webm",
         },
       },
       { src: "/images/work/thsocialmedia/gallery-03.jpg", width: 1600, height: 1200 },
       {
         video: {
-          mp4: "/videos/thsocialmedia-2.mp4",
           webm: "/videos/thsocialmedia-2.webm",
         },
       },
