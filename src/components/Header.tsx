@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -12,9 +12,27 @@ export default function Header() {
   const [open, setOpen] = useState(false);
   const isWorkActive = pathname === "/" || pathname.startsWith("/work/");
 
+  useEffect(() => {
+    if (!open) return;
+    document.body.style.overflow = "hidden";
+    const closeOnDesktop = () => {
+      if (window.innerWidth >= 800) setOpen(false);
+    };
+    window.addEventListener("resize", closeOnDesktop);
+    return () => {
+      document.body.style.overflow = "";
+      window.removeEventListener("resize", closeOnDesktop);
+    };
+  }, [open]);
+
   return (
-    <header className={styles.header}>
-      <Link href="/" className={styles.logo} aria-label="Matt Zmak Design">
+    <header className={`${styles.header} ${open ? styles.headerOpen : ""}`}>
+      <Link
+        href="/"
+        className={styles.logo}
+        aria-label="Matt Zmak Design"
+        onClick={() => setOpen(false)}
+      >
         <Image
           src="/images/global/logo.png"
           alt="Matt Zmak Design"
@@ -60,50 +78,50 @@ export default function Header() {
 
       <button
         type="button"
-        className={styles.menuButton}
+        className={`${styles.menuButton} ${open ? styles.menuButtonOpen : ""}`}
         aria-label={open ? "Close menu" : "Open menu"}
         aria-expanded={open}
         onClick={() => setOpen((v) => !v)}
       >
-        {open ? "✕" : "+"}
+        <span className={styles.bar} />
+        <span className={styles.bar} />
       </button>
 
-      {open && (
-        <div className={styles.mobileMenu}>
-          <Link
-            href="/"
-            className={isWorkActive ? styles.active : undefined}
-            onClick={() => setOpen(false)}
+      <div
+        className={`${styles.mobileMenu} ${open ? styles.mobileMenuOpen : ""}`}
+        aria-hidden={!open}
+      >
+        <Link href="/" tabIndex={open ? 0 : -1} onClick={() => setOpen(false)}>
+          work
+        </Link>
+        <Link
+          href="/about"
+          tabIndex={open ? 0 : -1}
+          onClick={() => setOpen(false)}
+        >
+          about
+        </Link>
+        <div className={styles.mobileSocial}>
+          <a
+            href="http://instagram.com/zmakyou"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+            tabIndex={open ? 0 : -1}
           >
-            work
-          </Link>
-          <Link
-            href="/about"
-            className={pathname === "/about" ? styles.active : undefined}
-            onClick={() => setOpen(false)}
+            <InstagramIcon size={25} cropped />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/mattzmak/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+            tabIndex={open ? 0 : -1}
           >
-            about
-          </Link>
-          <div className={styles.mobileSocial}>
-            <a
-              href="http://instagram.com/zmakyou"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Instagram"
-            >
-              Instagram
-            </a>
-            <a
-              href="https://www.linkedin.com/in/mattzmak/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn"
-            >
-              LinkedIn
-            </a>
-          </div>
+            <LinkedinIcon size={25} cropped />
+          </a>
         </div>
-      )}
+      </div>
     </header>
   );
 }

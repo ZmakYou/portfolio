@@ -81,29 +81,23 @@
   color: var(--color-accent);
 }
 
-.menuButton {
-  display: none;
-  background: none;
-  border: none;
-  color: #ffffff;
-  font-size: 1.5rem;
-  line-height: 1;
-  cursor: pointer;
-  padding: 0.25rem;
-}
-
+.menuButton,
 .mobileMenu {
   display: none;
-  position: fixed;
-  inset: 0;
-  z-index: 30;
-  background: #3a3a3d;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 799px) {
   .header {
-    padding: 1.5rem;
-    flex-wrap: wrap;
+    padding: 6vw;
+  }
+
+  .headerOpen {
+    position: fixed;
+  }
+
+  .logo {
+    width: 50px;
+    height: 50px;
   }
 
   .nav,
@@ -113,24 +107,92 @@
 
   .menuButton {
     display: block;
+    position: relative;
+    width: 47px;
+    height: 37px;
+    padding: 0;
+    border: 0;
+    background: none;
+    cursor: pointer;
+  }
+
+  .bar {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: #ffffff;
+    transition:
+      transform 0.25s cubic-bezier(0.2, 0.6, 0.3, 1),
+      background-color 0.25s cubic-bezier(0.2, 0.6, 0.3, 1);
+  }
+
+  .bar:nth-child(1) {
+    width: 28px;
+    height: 3px;
+    transform: translate(-50%, -50%);
+  }
+
+  .bar:nth-child(2) {
+    width: 3px;
+    height: 28px;
+    transform: translate(-50%, -50%);
+  }
+
+  .menuButtonOpen .bar {
+    background: var(--color-accent);
+  }
+
+  .menuButtonOpen .bar:nth-child(1) {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  .menuButtonOpen .bar:nth-child(2) {
+    transform: translate(-50%, -50%) rotate(45deg);
   }
 
   .mobileMenu {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 2rem;
-    color: #ffffff;
-    font-family: var(--font-heading);
-    font-weight: 400;
-    font-size: 1.75rem;
+    padding-top: calc(12vw + 50px);
+    padding-bottom: 77.5px;
+    background: #ffffff;
+    opacity: 0;
+    visibility: hidden;
+    transition:
+      visibility 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+      opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .mobileMenuOpen {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .mobileMenu > a {
+    padding: 0.5063em 0;
+    font-family: var(--font-body);
+    font-weight: 300;
+    font-size: calc(0.019572 * min(100vh, 900px) + 1rem);
+    line-height: 1;
+    color: var(--color-accent);
   }
 
   .mobileSocial {
+    position: absolute;
+    bottom: 37.5px;
+    left: 50%;
     display: flex;
-    gap: 1.5rem;
-    font-size: 1rem;
-    margin-top: 0.5rem;
+    gap: 15px;
+    transform: translateX(-50%);
+  }
+
+  .mobileSocial a {
+    display: flex;
+    color: var(--color-accent);
   }
 }
