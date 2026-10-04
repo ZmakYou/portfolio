@@ -74,7 +74,7 @@ export default async function ProjectPage({
         className={styles.gallery}
         style={
           project.video
-            ? { marginTop: "calc(8vw + 8px)" }
+            ? { marginTop: "2.75vw" }
             : project.extraGalleryGapVw
               ? { marginTop: `calc(3vw + ${project.extraGalleryGapVw}vw)` }
               : undefined
