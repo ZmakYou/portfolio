@@ -51,6 +51,19 @@
   color: #ffffff;
 }
 
+.video {
+  max-width: 2000px;
+  margin: 5.32vw auto 0;
+  padding: 0 3vw;
+}
+
+.videoPlayer {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #000000;
+}
+
 .gallery {
   display: flex;
   flex-direction: column;

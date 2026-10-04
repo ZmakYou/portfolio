@@ -8,6 +8,8 @@ export type Project = {
   paragraphs: string[];
   involvement: string;
   gallery: { src: string; width: number; height: number }[];
+  /** Locally hosted video shown between the hero and the gallery. */
+  video?: { mp4: string; webm?: string };
   /** Extra vw-based gap before the gallery, matching an empty spacer section unique to this page on the live site. */
   extraGalleryGapVw?: number;
 };
@@ -25,7 +27,10 @@ export const projects: Project[] = [
     ],
     involvement:
       "involvement: art direction, layout, typography, photo editing, production, templating",
-    extraGalleryGapVw: 63.2,
+    video: {
+      mp4: "/videos/cvisualidentity.mp4",
+      webm: "/videos/cvisualidentity.webm",
+    },
     gallery: [
       { src: "/images/work/cvisualidentity/gallery-01.png", width: 1600, height: 1200 },
       { src: "/images/work/cvisualidentity/gallery-02.png", width: 1600, height: 1200 },

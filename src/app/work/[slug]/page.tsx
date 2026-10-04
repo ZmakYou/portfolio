@@ -54,12 +54,30 @@ export default async function ProjectPage({
         </div>
       </section>
 
+      {project.video && (
+        <section className={styles.video}>
+          <video
+            className={styles.videoPlayer}
+            controls
+            playsInline
+            preload="metadata"
+          >
+            {project.video.webm && (
+              <source src={project.video.webm} type="video/webm" />
+            )}
+            <source src={project.video.mp4} type="video/mp4" />
+          </video>
+        </section>
+      )}
+
       <section
         className={styles.gallery}
         style={
-          project.extraGalleryGapVw
-            ? { marginTop: `calc(3vw + ${project.extraGalleryGapVw}vw)` }
-            : undefined
+          project.video
+            ? { marginTop: "calc(8vw + 8px)" }
+            : project.extraGalleryGapVw
+              ? { marginTop: `calc(3vw + ${project.extraGalleryGapVw}vw)` }
+              : undefined
         }
       >
         {project.gallery.map((img, i) => (
