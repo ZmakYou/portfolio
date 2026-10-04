@@ -54,44 +54,38 @@ export default async function ProjectPage({
         </div>
       </section>
 
-      {project.video && (
-        <section className={styles.video}>
-          <video
-            className={styles.videoPlayer}
-            controls
-            playsInline
-            preload="metadata"
-          >
-            {project.video.webm && (
-              <source src={project.video.webm} type="video/webm" />
-            )}
-            <source src={project.video.mp4} type="video/mp4" />
-          </video>
-        </section>
-      )}
-
       <section
         className={styles.gallery}
-        style={
-          project.video
-            ? { marginTop: "2.75vw" }
-            : project.extraGalleryGapVw
-              ? { marginTop: `calc(3vw + ${project.extraGalleryGapVw}vw)` }
-              : undefined
-        }
+        style={"video" in project.gallery[0] ? { marginTop: "2.75vw" } : undefined}
       >
-        {project.gallery.map((img, i) => (
-          <div key={i} className={styles.galleryItem}>
-            <Image
-              src={img.src}
-              alt={`${project.title} — image ${i + 1}`}
-              width={img.width}
-              height={img.height}
-              sizes="100vw"
-              className={styles.galleryImage}
-            />
-          </div>
-        ))}
+        {project.gallery.map((item, i) =>
+          "video" in item ? (
+            <div key={i} className={styles.galleryItem}>
+              <video
+                className={styles.galleryVideo}
+                controls
+                playsInline
+                preload="metadata"
+              >
+                {item.video.webm && (
+                  <source src={item.video.webm} type="video/webm" />
+                )}
+                <source src={item.video.mp4} type="video/mp4" />
+              </video>
+            </div>
+          ) : (
+            <div key={i} className={styles.galleryItem}>
+              <Image
+                src={item.src}
+                alt={`${project.title} — image ${i + 1}`}
+                width={item.width}
+                height={item.height}
+                sizes="100vw"
+                className={styles.galleryImage}
+              />
+            </div>
+          ),
+        )}
       </section>
 
       <section className={styles.pagination}>

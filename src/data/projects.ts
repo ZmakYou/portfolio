@@ -7,12 +7,13 @@ export type Project = {
   homeImage: string;
   paragraphs: string[];
   involvement: string;
-  gallery: { src: string; width: number; height: number }[];
-  /** Locally hosted video shown between the hero and the gallery. */
-  video?: { mp4: string; webm?: string };
-  /** Extra vw-based gap before the gallery, matching an empty spacer section unique to this page on the live site. */
-  extraGalleryGapVw?: number;
+  /** Ordered gallery; a video item can sit anywhere and gets the same spacing as images. */
+  gallery: GalleryItem[];
 };
+
+export type GalleryItem =
+  | { src: string; width: number; height: number }
+  | { video: { mp4: string; webm?: string } };
 
 export const projects: Project[] = [
   {
@@ -27,11 +28,13 @@ export const projects: Project[] = [
     ],
     involvement:
       "involvement: art direction, layout, typography, photo editing, production, templating",
-    video: {
-      mp4: "/videos/cvisualidentity.mp4",
-      webm: "/videos/cvisualidentity.webm",
-    },
     gallery: [
+      {
+        video: {
+          mp4: "/videos/cvisualidentity.mp4",
+          webm: "/videos/cvisualidentity.webm",
+        },
+      },
       { src: "/images/work/cvisualidentity/gallery-01.png", width: 1600, height: 1200 },
       { src: "/images/work/cvisualidentity/gallery-02.png", width: 1600, height: 1200 },
       { src: "/images/work/cvisualidentity/gallery-03.png", width: 1600, height: 1200 },
