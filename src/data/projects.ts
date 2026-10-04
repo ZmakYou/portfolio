@@ -188,6 +188,12 @@ export const projects: Project[] = [
       { src: "/images/work/mzfilmtitlesequence/gallery-02.jpg", width: 1600, height: 1200 },
       { src: "/images/work/mzfilmtitlesequence/gallery-03.jpg", width: 1600, height: 1200 },
       { src: "/images/work/mzfilmtitlesequence/gallery-04.jpg", width: 1600, height: 1200 },
+      {
+        video: {
+          mp4: "/videos/mzfilmtitlesequence.mp4",
+          webm: "/videos/mzfilmtitlesequence.webm",
+        },
+      },
     ],
   },
   {
@@ -206,7 +212,19 @@ export const projects: Project[] = [
     gallery: [
       { src: "/images/work/thsocialmedia/gallery-01.jpg", width: 1600, height: 1200 },
       { src: "/images/work/thsocialmedia/gallery-02.jpg", width: 1600, height: 1200 },
+      {
+        video: {
+          mp4: "/videos/thsocialmedia-1.mp4",
+          webm: "/videos/thsocialmedia-1.webm",
+        },
+      },
       { src: "/images/work/thsocialmedia/gallery-03.jpg", width: 1600, height: 1200 },
+      {
+        video: {
+          mp4: "/videos/thsocialmedia-2.mp4",
+          webm: "/videos/thsocialmedia-2.webm",
+        },
+      },
       { src: "/images/work/thsocialmedia/gallery-04.jpg", width: 1600, height: 1200 },
     ],
   },
