@@ -13,7 +13,7 @@ export type Project = {
 
 export type GalleryItem =
   | { src: string; width: number; height: number }
-  | { video: { webm: string } };
+  | { video: { webm: string; poster?: string } };
 
 export const projects: Project[] = [
   {
@@ -32,6 +32,7 @@ export const projects: Project[] = [
       {
         video: {
           webm: "/videos/cvisualidentity.webm",
+          poster: "/videos/cvisualidentity-poster.jpg",
         },
       },
       { src: "/images/work/cvisualidentity/gallery-01.png", width: 1600, height: 1200 },

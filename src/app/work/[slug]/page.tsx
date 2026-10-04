@@ -64,6 +64,7 @@ export default async function ProjectPage({
               <video
                 className={styles.galleryVideo}
                 src={item.video.webm}
+                poster={item.video.poster}
                 controls
                 playsInline
                 preload="metadata"
