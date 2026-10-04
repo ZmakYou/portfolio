@@ -191,7 +191,7 @@
     padding: calc(var(--menu-line) * 0.5063) 0;
     font-family: var(--font-body);
     font-weight: 300;
-    font-size: calc(var(--menu-line) * 0.933);
+    font-size: var(--menu-line);
     line-height: var(--menu-line);
     color: var(--color-accent);
   }
