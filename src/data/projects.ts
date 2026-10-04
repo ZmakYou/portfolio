@@ -100,6 +100,12 @@ export const projects: Project[] = [
       { src: "/images/work/rcontentcreation/gallery-02.jpg", width: 1600, height: 1200 },
       { src: "/images/work/rcontentcreation/gallery-03.jpg", width: 1600, height: 1200 },
       { src: "/images/work/rcontentcreation/gallery-04.jpg", width: 1600, height: 1200 },
+      {
+        video: {
+          mp4: "/videos/rcontentcreation.mp4",
+          webm: "/videos/rcontentcreation.webm",
+        },
+      },
     ],
   },
   {
