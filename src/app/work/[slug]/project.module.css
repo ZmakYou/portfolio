@@ -106,8 +106,8 @@
 .paginationTitle {
   font-family: var(--font-heading);
   font-weight: 400;
-  font-size: calc(1.2vw + 1rem);
-  font-size: round(nearest, calc(1.2vw + 1rem), 4px);
+  font-size: calc(0.6vw + 1rem);
+  font-size: round(nearest, calc(0.6vw + 1rem), 4px);
   white-space: nowrap;
 }
 
@@ -119,7 +119,6 @@
   }
 
   .paginationTitle {
-    font-size: 16px;
     white-space: normal;
   }
 
