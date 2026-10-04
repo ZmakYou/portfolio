@@ -63,7 +63,7 @@
   flex-direction: column;
   gap: 2.75vw;
   max-width: 2000px;
-  margin: 3vw auto;
+  margin: 3vw auto 0;
   padding: 0 3vw;
 }
 
@@ -82,7 +82,7 @@
   justify-content: space-between;
   align-items: center;
   background: #ffffff;
-  padding: 3vw;
+  padding: 2.75vw 3vw 0;
 }
 
 .paginationLink {
@@ -112,7 +112,7 @@
   .pagination {
     flex-wrap: wrap;
     gap: 1rem;
-    padding: 1.5rem;
+    padding: 2.75vw 1.5rem 0;
   }
 
   .paginationTitle {
