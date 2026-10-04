@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import GalleryVideo from "@/components/GalleryVideo";
+import Reveal from "@/components/Reveal";
 import { projects, getProject } from "@/data/projects";
 import styles from "./project.module.css";
 
@@ -74,16 +75,16 @@ export default async function ProjectPage({
       >
         {project.gallery.map((item, i) =>
           "video" in item ? (
-            <div key={i} className={styles.galleryItem}>
+            <Reveal key={i} className={styles.galleryItem}>
               <GalleryVideo
                 className={styles.galleryVideo}
                 src={item.video.webm}
                 poster={item.video.poster}
                 autoplayLoop={item.video.autoplayLoop}
               />
-            </div>
+            </Reveal>
           ) : (
-            <div key={i} className={styles.galleryItem}>
+            <Reveal key={i} className={styles.galleryItem}>
               <Image
                 src={item.src}
                 alt={`${project.title} — image ${i + 1}`}
@@ -92,9 +93,12 @@ export default async function ProjectPage({
                 sizes="100vw"
                 className={styles.galleryImage}
               />
-            </div>
+            </Reveal>
           ),
         )}
+        <noscript>
+          <style>{"[data-reveal]{opacity:1!important;transform:none!important}"}</style>
+        </noscript>
       </section>
 
       <section className={styles.pagination}>
