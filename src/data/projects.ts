@@ -103,6 +103,7 @@ export const projects: Project[] = [
       {
         video: {
           webm: "/videos/rcontentcreation.webm",
+          autoplayLoop: true,
         },
       },
     ],
