@@ -91,16 +91,22 @@ export default function Header() {
         className={`${styles.mobileMenu} ${open ? styles.mobileMenuOpen : ""}`}
         aria-hidden={!open}
       >
-        <Link href="/" tabIndex={open ? 0 : -1} onClick={() => setOpen(false)}>
-          work
-        </Link>
-        <Link
-          href="/about"
-          tabIndex={open ? 0 : -1}
-          onClick={() => setOpen(false)}
-        >
-          about
-        </Link>
+        <nav className={styles.mobileNav}>
+          <Link
+            href="/"
+            tabIndex={open ? 0 : -1}
+            onClick={() => setOpen(false)}
+          >
+            work
+          </Link>
+          <Link
+            href="/about"
+            tabIndex={open ? 0 : -1}
+            onClick={() => setOpen(false)}
+          >
+            about
+          </Link>
+        </nav>
         <div className={styles.mobileSocial}>
           <a
             href="http://instagram.com/zmakyou"
