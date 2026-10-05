@@ -39,6 +39,15 @@
   pointer-events: none;
 }
 
+.wrapper video::-webkit-media-controls-overlay-play-button {
+  display: none !important;
+}
+
+.wrapper video::-webkit-media-controls-start-playback-button {
+  display: none !important;
+  -webkit-appearance: none;
+}
+
 @container (min-width: 800px) {
   .play {
     width: 120px;
